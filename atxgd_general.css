@@ -78,6 +78,30 @@ body {
     height: auto;
 }
 
+.atxgd_nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10vmax;
+}
+
+.atxgd_nav-link{
+    color: inherit;
+    text-decoration: none;
+} 
+
+.atxgd_nav-link:hover {
+    color: inherit;
+    text-decoration: none;
+} 
+
+.atxgd_nav-link-active {
+
+}
+
+#atxgd_mobile-burger {
+    visibility: hidden;
+}
+
 @media screen and (max-width: 600px) {
     .atxgd_logo-wrapper {
         text-align: left;
