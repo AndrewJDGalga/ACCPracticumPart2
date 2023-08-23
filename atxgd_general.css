@@ -1,0 +1,35 @@
+:root {
+    /*base 3 colors*/
+    --light-blue: #DAE6ED;
+    --dark-green: #249245;
+    --deep-blue: #18244D;
+    /*complements --lightblue*/
+    --clear-sky-blue: #2BB1FF;
+    --faded-blue: #0F91DB;
+    --mud-brown: #8F5200;
+    --dune-brown: #DB840F;
+    /*complements --dark-green*/
+    --sharp-green: #2BFF6B;
+    --dim-green: #0FDB4D;
+    --dull-red: #8F0100;
+    --wildflower-red: #DB110F;
+    /*complements --deep-blue*/
+    --pool-blue: #2B5DFF;
+    --fading-day-blue: #0F3FDB;
+    --dull-gold: #8F6800;
+    --off-gold: #DBA40F;
+    /*extra shading*/
+    --shadow-grey: #2d2d2d;
+    --protospiel-poster-tan: #fcf2c3;
+    /*header backing color extracted from image*/
+    --bleached-folder: #eee3cd;
+    --off-paper: #f7f0e5;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
