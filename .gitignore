@@ -1,0 +1,9 @@
+#ignore
+*
+**/*
+
+#allow
+!.gitignore
+!.html
+!.css
+!.js
