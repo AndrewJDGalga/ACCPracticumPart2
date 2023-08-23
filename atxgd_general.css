@@ -39,6 +39,11 @@ body {
     min-width: 320px;
 }
 
+.atxgd_content, 
+.atxgd_icon_container {
+    max-width: 1080px;
+}
+
 /*__header__*/
 .atxgd_header {
     font-family: "hightower-text", serif;
@@ -50,10 +55,13 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 30%;
+    height: 25vmin;
+    max-height: 260px;
+    min-height: 100px;
     background-image: url('./assets/banner/ATX-GD-Web-banner-photo-onlyCrop1.webp');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     z-index: -1;
 }
 
@@ -63,6 +71,7 @@ body {
 }
 .atxgd_logo {
     width: 30%;
+    max-width: 320px;
     height: auto;
 }
 
@@ -73,15 +82,11 @@ body {
 }
 
 @media screen and (min-width: 1080px){
-    .atxgd_header-backer {
-        background-position: top;
-    }
+    
 }
 
 @media screen and (max-width: 1080px){
-    .atxgd_header-backer {
-        background-size: 100% auto;
-    }
+    
 }
 
 /*__article__*/
@@ -90,7 +95,7 @@ body {
 }
 
 .atxgd_content {
-    margin-top: 10%;
+    margin-top: 15vmin;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -98,12 +103,16 @@ body {
 
 /*__footer__*/
 .atxgd_footer {
-    max-width: 1080px;
     position: absolute;
     bottom: 0;
     margin-top: auto;
     width: 100%;
     text-align: center;
+}
+
+.atxgd_icon_container {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .high_center_wave {
