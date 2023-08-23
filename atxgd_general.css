@@ -98,6 +98,7 @@ body {
 
 /*__footer__*/
 .atxgd_footer {
+    max-width: 1080px;
     position: absolute;
     bottom: 0;
     margin-top: auto;
@@ -105,3 +106,20 @@ body {
     text-align: center;
 }
 
+.high_center_wave {
+    background-color: var(--deep-blue);
+    border-top-left-radius: 150% 300%;
+    border-top-right-radius: 150% 300%;
+    height: 100%;
+    width: 100%;
+}
+
+.atxgd_facebook-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.atxgd_meetup-icon {
+    width: 48px;
+    height: 48px;
+}
