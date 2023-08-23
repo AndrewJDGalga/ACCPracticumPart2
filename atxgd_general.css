@@ -39,6 +39,7 @@ body {
     min-width: 320px;
 }
 
+/*__header__*/
 .atxgd_header {
     font-family: "hightower-text", serif;
     font-style: normal;
@@ -65,6 +66,12 @@ body {
     height: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .atxgd_logo-wrapper {
+        text-align: left;
+    }
+}
+
 @media screen and (min-width: 1080px){
     .atxgd_header-backer {
         background-position: top;
@@ -76,3 +83,10 @@ body {
         background-size: 100% auto;
     }
 }
+
+/*__article__*/
+.atxgd_content {
+    margin-top: 10%;
+}
+
+/*__footer__*/
