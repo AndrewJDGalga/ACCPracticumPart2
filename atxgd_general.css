@@ -32,4 +32,15 @@ html {
 
 body {
     margin: 0;
+    font-family: "bilo", serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--deep-blue);
+    min-width: 320px;
+}
+
+.atxgd_header {
+    font-family: "hightower-text", serif;
+    font-style: normal;
+    font-weight: 400;
 }
