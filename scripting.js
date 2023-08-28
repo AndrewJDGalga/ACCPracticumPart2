@@ -22,7 +22,7 @@ rightBtn.addEventListener('click', ()=>{
     slideImage(track, track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling);
 });
 leftBtn.addEventListener('click', ()=>{
-
+    slideImage(track, track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling);
 });
 navBar.addEventListener('click', (e)=>{
 
