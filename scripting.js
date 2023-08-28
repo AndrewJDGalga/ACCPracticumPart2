@@ -35,13 +35,9 @@ const updateImagesAndIndicators = (currentImage, newImage, currentIndicator, nex
 
 rightBtn.addEventListener('click', ()=>{
     updateImagesAndIndicators(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling, 0);
-    //updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, 0);
-    //updatePosIndicators(navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling);
-    //console.log(navBar);
 });
 leftBtn.addEventListener('click', ()=>{
-    updateImagesAndIndicators(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling, images.length -1);
-    //updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling, images.length -1);  
+    updateImagesAndIndicators(track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling, navBar.querySelector('.current-position'), navBar.querySelector('.current-position').previousElementSibling, images.length -1);
 });
 navBar.addEventListener('click', (e)=>{
 
