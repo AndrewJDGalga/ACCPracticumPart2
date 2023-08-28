@@ -46,7 +46,7 @@
     transform: translateY(-50%);
 }
 .carousel-btn:hover {
-    color: var(--dark-green);
+    color: var(--clear-sky-blue);
 }
 .atxgd_carousel-btnleft{
     left: var(--distance);
@@ -70,7 +70,13 @@
     cursor: pointer;
     margin: 0 16px;
 }
+.atxgd_carousel-position:hover {
+    background-color: var(--clear-sky-blue);
+}
 .atxgd_carousel-position.current-position {
-background-color: var(--dark-green);
+    background-color: var(--dark-green);
+}
+.atxgd_carousel-position.current-position:hover {
+    background-color: var(--clear-sky-blue);
 }
 
