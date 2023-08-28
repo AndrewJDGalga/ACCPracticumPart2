@@ -18,22 +18,30 @@ const slideImages = (track, currentImage, newImage) => {
     newImage.classList.add('current-image');
 };
 
-const updatePosIndicators = ()=>{
-
+const updatePosIndicators = (currentIndicator, nextIndicator) =>{
+    currentIndicator.classList.remove('current-position');
+    nextIndicator.classList.add('current-position');
 };
 
-const updateImages = (currentImage, newImage, arrayStartOrEnd) => {
+const updateImagesAndIndicators = (currentImage, newImage, currentIndicator, nextIndicator, arrayStartOrEnd) => {
     if(!newImage){
+        //designed for the same number of images and indicators
         newImage = images[arrayStartOrEnd];
+        nextIndicator = posIndicators[arrayStartOrEnd];
     }
     slideImages(track, currentImage, newImage);
+    updatePosIndicators(currentIndicator, nextIndicator);
 };
 
 rightBtn.addEventListener('click', ()=>{
-    updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, 0);
+    updateImagesAndIndicators(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling, 0);
+    //updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, 0);
+    //updatePosIndicators(navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling);
+    //console.log(navBar);
 });
 leftBtn.addEventListener('click', ()=>{
-    updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling, images.length -1);
+    updateImagesAndIndicators(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, navBar.querySelector('.current-position'), navBar.querySelector('.current-position').nextElementSibling, images.length -1);
+    //updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling, images.length -1);  
 });
 navBar.addEventListener('click', (e)=>{
 
