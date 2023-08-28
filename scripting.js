@@ -1,4 +1,4 @@
-//Thanks Kevin Powell on YouTube
+//Check out Kevin Powell on YouTube
 const track = document.getElementsByClassName('atxgd_carousel-images')[0];
 const images = Array.from(track.children);
 const rightBtn = document.getElementsByClassName('atxgd_carousel-btnright')[0];
@@ -11,3 +11,19 @@ const setImagePositon = (image, index) => {
     image.style.left = `${imageWidth * index}px`;
 };
 images.forEach(setImagePositon);
+
+const slideImage = (track, currentImage, newImage) => {
+    track.style.transform = `translateX(-${newImage.style.left})`;
+    currentImage.classList.remove('current-image');
+    newImage.classList.add('current-image');
+};
+
+rightBtn.addEventListener('click', ()=>{
+    slideImage(track, track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling);
+});
+leftBtn.addEventListener('click', ()=>{
+
+});
+navBar.addEventListener('click', (e)=>{
+
+});
