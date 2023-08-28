@@ -48,10 +48,10 @@
 .carousel-btn:hover {
     color: var(--dark-green);
 }
-#atxgd_carousel-btnleft{
+.atxgd_carousel-btnleft{
     left: var(--distance);
 }
-#atxgd_carousel-btnright {
+.atxgd_carousel-btnright {
     right: var(--distance);
 }
 
