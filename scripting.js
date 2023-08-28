@@ -12,17 +12,28 @@ const setImagePositon = (image, index) => {
 };
 images.forEach(setImagePositon);
 
-const slideImage = (track, currentImage, newImage) => {
+const slideImages = (track, currentImage, newImage) => {
     track.style.transform = `translateX(-${newImage.style.left})`;
     currentImage.classList.remove('current-image');
     newImage.classList.add('current-image');
 };
 
+const updatePosIndicators = ()=>{
+
+};
+
+const updateImages = (currentImage, newImage, arrayStartOrEnd) => {
+    if(!newImage){
+        newImage = images[arrayStartOrEnd];
+    }
+    slideImages(track, currentImage, newImage);
+};
+
 rightBtn.addEventListener('click', ()=>{
-    slideImage(track, track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling);
+    updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').nextElementSibling, 0);
 });
 leftBtn.addEventListener('click', ()=>{
-    slideImage(track, track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling);
+    updateImages(track.querySelector('.current-image'), track.querySelector('.current-image').previousElementSibling, images.length -1);
 });
 navBar.addEventListener('click', (e)=>{
 
