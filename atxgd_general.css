@@ -21,6 +21,7 @@
     /*extra shading*/
     --shadow-grey: #2d2d2d;
     --protospiel-poster-tan: #fcf2c3;
+    --clear: rgba(0,0,0,0);
     /*header backing color extracted from image*/
     --bleached-folder: #eee3cd;
     --off-paper: #f7f0e5;
