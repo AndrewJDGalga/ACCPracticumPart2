@@ -1,5 +1,5 @@
 .atxgd_carousel {
-    width: 50vw;
+    width: 60vw;
     height: 50vw;
     margin: 0 auto;
 }
@@ -14,7 +14,7 @@
 
 .atxgd_carousel-top {
     display: flex;
-    /*position: relative; --not needed?*/
+    position: relative;
 }
 
 .atxgd_carousel-spillcatch {
@@ -32,31 +32,45 @@
     object-fit: cover;
 }
 
-#atxgd_carousel-btnleft{
-
-}
-#atxgd_carousel-btnright {
-
-}
 .carousel-btn{
+    --distance: -44px;
     width: 1em;
     height: 1em;
     font-size: 3em;
-    color: var(--dark-green);
+    color: var(--deep-blue);
     background-color: var(--clear);
     border-color: var(--clear);
     cursor: pointer;
-
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-btn:hover {
+    color: var(--dark-green);
+}
+#atxgd_carousel-btnleft{
+    left: var(--distance);
+}
+#atxgd_carousel-btnright {
+    right: var(--distance);
 }
 
 .atxgd_carousel-bottom {
-
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
 .atxgd_carousel-position {
-
+    border: 0;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: var(--deep-blue);
+    cursor: pointer;
+    margin: 0 16px;
 }
 .atxgd_carousel-position.current-position {
-
+background-color: var(--dark-green);
 }
 
