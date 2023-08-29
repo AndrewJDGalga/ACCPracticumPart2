@@ -1,4 +1,5 @@
-//Check out Kevin Powell on YouTube
+
+/*
 const track = document.getElementsByClassName('atxgd_carousel-images')[0];
 const images = Array.from(track.children);
 const rightBtn = document.getElementsByClassName('atxgd_carousel-btnright')[0];
@@ -41,4 +42,4 @@ leftBtn.addEventListener('click', ()=>{
 });
 navBar.addEventListener('click', (e)=>{
 
-});
+});*/

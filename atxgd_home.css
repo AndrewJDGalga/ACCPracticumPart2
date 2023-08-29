@@ -28,7 +28,7 @@
     z-index: -1;
 }
 .atxgd_carousel-image {
-    position: absolute;
+    flex: 1 0 100%;
     object-fit: cover;
 }
 
@@ -64,11 +64,11 @@
 .atxgd_carousel-position {
     border: 0;
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
+    width: 1em;
+    height: 1em;
     background-color: var(--deep-blue);
     cursor: pointer;
-    margin: 0 16px;
+    margin: 0 1em;
 }
 .atxgd_carousel-position:hover {
     background-color: var(--clear-sky-blue);
