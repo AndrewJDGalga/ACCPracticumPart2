@@ -1,3 +1,20 @@
+const carouselSlide = document.getElementsByClassName('atxgd_carousel-images')[0];
+const btnLeft = document.getElementsByClassName('atxgd_carousel-btnleft')[0];
+const btnRight = document.getElementsByClassName('atxgd_carousel-btnright')[0];
+
+carouselSlide.style.left = '0px';
+
+const moveCarousel = (container, directionX) => {
+    const convertedPosition = parseFloat(container.style.left, 10);
+    container.style.left = `${convertedPosition + 100 * directionX}%`;
+};
+
+btnRight.addEventListener('click', ()=>{
+    moveCarousel(carouselSlide, 1);
+});
+btnLeft.addEventListener('click', ()=>{
+    moveCarousel(carouselSlide, -1);
+});
 
 /*
 const track = document.getElementsByClassName('atxgd_carousel-images')[0];
