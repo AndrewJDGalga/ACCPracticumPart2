@@ -1,6 +1,6 @@
 .atxgd_carousel {
-    width: 50vmin;
-    height: 50vmin;
+    width: 60vmin;
+    height: 60vmin;
     margin: 0 auto;
 }
 
@@ -18,13 +18,13 @@
 }
 
 .atxgd_carousel-spillcatch {
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .atxgd_carousel-images {
     position: relative;
     display: flex;
-    transition: transform 250ms ease-in;
+    transition: left 350ms ease-in;
     z-index: -1;
 }
 .atxgd_carousel-image {

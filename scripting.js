@@ -6,7 +6,15 @@ carouselSlide.style.left = '0px';
 
 const moveCarousel = (container, directionX) => {
     const convertedPosition = parseFloat(container.style.left, 10);
-    container.style.left = `${convertedPosition + 100 * directionX}%`;
+    let newPositon = convertedPosition - 100 * directionX;
+
+    if(newPositon > 0) {
+        newPositon = (container.childElementCount-1) * -100;
+    } else if(newPositon < ((container.childElementCount-1) * -100)) {
+        newPositon = 0;
+    }
+    
+    container.style.left = `${newPositon}%`;
 };
 
 btnRight.addEventListener('click', ()=>{
