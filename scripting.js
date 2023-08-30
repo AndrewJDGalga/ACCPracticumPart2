@@ -24,27 +24,41 @@ const updateActiveIndicator = (oldIndicator, newIndicator) => {
     newIndicator.classList.add('current-position');
 };
 
+const slideIndex = (srcArray) => {
+    return srcArray.findIndex(slide => slide.classList.contains('current-position'));
+};
+
 btnRight.addEventListener('click', ()=>{
-    let indexOld = slides.findIndex(slide => slide.classList.contains('current-position'));
+    let indexOld = slideIndex(slides);
     
     //cannot check if slides[index].nextElementSibling is valid because last image this will be null
     (indexOld < slides.length-1) ? updateActiveSlide(slides[indexOld], slides[indexOld].nextElementSibling) : updateActiveSlide(slides[indexOld], slides[0]);
-    let indexNew = slides.findIndex(slide => slide.classList.contains('current-position'));
+    let indexNew = slideIndex(slides);
 
     moveCarousel(carouselTrack, indexNew);
     updateActiveIndicator(indicators[indexOld], indicators[indexNew]);
 });
 btnLeft.addEventListener('click', ()=>{
-    let indexOld = slides.findIndex(slide => slide.classList.contains('current-position'));
+    let indexOld = slideIndex(slides);
     
     //can check previouselementsibling here as you'll still be allowed to get to 0
     (slides[indexOld].previousElementSibling) ? updateActiveSlide(slides[indexOld], slides[indexOld].previousElementSibling) : updateActiveSlide(slides[indexOld], slides[slides.length-1]);
-    let indexNew = slides.findIndex(slide => slide.classList.contains('current-position'));
+    let indexNew = slideIndex(slides);
 
     moveCarousel(carouselTrack, indexNew);
     updateActiveIndicator(indicators[indexOld], indicators[indexNew]);
 });
 indicatorsContainer.addEventListener('click', (e)=>{
-
+    const target = e.target.closest('button');
+    if(target){
+        const currentIndicator = indicatorsContainer.querySelector('.current-position');
+        if(target !== currentIndicator) {
+            const oldSlideIndex = slideIndex(slides);
+            const index = indicators.findIndex(indicator => indicator === target);
+            updateActiveSlide(slides[oldSlideIndex], slides[index]);
+            moveCarousel(carouselTrack, index);
+            updateActiveIndicator(currentIndicator, indicators[index]);
+        }
+    }
 });
 
