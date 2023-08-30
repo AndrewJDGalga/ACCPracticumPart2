@@ -24,7 +24,8 @@
 .atxgd_carousel-images {
     position: relative;
     display: flex;
-    transition: left 350ms ease-in;
+    transition: transform 250ms ease-in;
+    transform: translateX(0%);
     z-index: -1;
 }
 .atxgd_carousel-image {

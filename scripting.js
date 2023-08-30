@@ -5,13 +5,8 @@ const btnRight = document.getElementsByClassName('atxgd_carousel-btnright')[0];
 const indicatorsContainer = document.getElementsByClassName('atxgd_carousel-nav-btns')[0];
 const indicators = Array.from(indicatorsContainer.children);
 
-const initCarousel = () =>{
-    carouselTrack.style.left = '0px';
-};
-initCarousel();
-
 const moveCarousel = (container, index) => {
-    container.style.left = `${index * -100}%`;
+    container.style.transform = `translateX(${index * -100}%)`;
 };
 
 const updateActiveSlide = (oldSlide, newSlide) => {
