@@ -1,3 +1,6 @@
+/*Mobile nav button______________________________________________________________________*/
+
+/*Carousel_______________________________________________________________________________*/
 const carouselTrack = document.getElementsByClassName('atxgd_carousel-images')[0];
 const slides = Array.from(carouselTrack.children);
 const btnLeft = document.getElementsByClassName('atxgd_carousel-btnleft')[0];
