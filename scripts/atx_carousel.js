@@ -1,12 +1,3 @@
-/*Mobile nav button______________________________________________________________________*/
-const mobileBtn = document.getElementById('atxgd_mobile-burger');
-const navMenu = document.getElementsByClassName('atxgd_nav-menu')[0];
-const computedMenuStyle = window.getComputedStyle(navMenu);
-
-mobileBtn.addEventListener('click', ()=>{
-    (computedMenuStyle.getPropertyValue('visibility') === 'hidden') ? navMenu.style.visibility = 'visible' : navMenu.style.visibility = 'hidden';
-});
-
 /*Carousel_______________________________________________________________________________*/
 const carouselTrack = document.getElementsByClassName('atxgd_carousel-images')[0];
 const slides = Array.from(carouselTrack.children);
@@ -43,6 +34,7 @@ btnRight.addEventListener('click', ()=>{
     moveCarousel(carouselTrack, indexNew);
     updateActiveIndicator(indicators[indexOld], indicators[indexNew]);
 });
+
 btnLeft.addEventListener('click', ()=>{
     let indexOld = slideIndex(slides);
     
@@ -66,4 +58,3 @@ indicatorsContainer.addEventListener('click', (e)=>{
         }
     }
 });
-

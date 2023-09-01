@@ -231,3 +231,15 @@ body {
     top: 6px;
     margin-left: 32px;
 }
+
+/*special_____________*/
+.atxgd_embedded_link {
+    padding: 4px;
+    background-color: var(--dark-green);
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+.atxgd_center-text {
+    margin: 0 auto;
+}
