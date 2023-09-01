@@ -14,19 +14,9 @@
     text-align: center;
 }
 
-.atxgd_game-attribution-title {
-
-}
-
-.atxgd_game-attribution-authors {
-
-}
-
 .atxgd_game-image {
-
-}
-
-.atxgd_game-summary {
-
+    width: 60%;
+    height: auto;
+    border: solid 6px var(--deep-blue);
 }
 
