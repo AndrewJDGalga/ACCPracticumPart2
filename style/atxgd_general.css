@@ -124,6 +124,11 @@ body {
     top: -26px;
 }
 
+#atxgd_mobile-burger>img{
+    width: 90%;
+    height: 90%;
+    margin-top: 2px;
+}
 #atxgd_mobile-burger {
     display: none;
     position: relative;
@@ -135,6 +140,7 @@ body {
     box-shadow: inset 0.1em 0.1em 0.1em 0 var(--light-blue), inset -0.1em -0.1em 0.1em 0 var(--shadow-grey);
     left: 50%;
     transform: translateX(-50%);
+    object-fit: cover;
 }
 #atxgd_mobile-burger:hover {
     background-color: var(--clear-sky-blue);
@@ -171,7 +177,7 @@ body {
         width: 20%;
         height: 84px;
         filter: drop-shadow(5px 5px 5px var(--shadow-grey));
-        box-shadow: inset 0.1em 0.1em 0.1em 0 var(--light-blue), inset -0.1em -0.1em 0.1em 0 var(--shadow-grey);
+        /*box-shadow: inset 0.1em 0.1em 0.1em 0 var(--light-blue), inset -0.1em -0.1em 0.1em 0 var(--shadow-grey);*/
         visibility: hidden;
         margin-top: 0;
     }
@@ -179,6 +185,7 @@ body {
         filter: none;
         box-shadow: none;
         visibility: inherit; /*make sure buttons are invisible*/
+        margin-left: -4px;
     }
     .atxgd_nav-current-page::before {
         display: none;
