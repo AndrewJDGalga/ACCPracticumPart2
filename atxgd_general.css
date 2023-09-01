@@ -90,6 +90,7 @@ body {
     justify-content: center;
     position: relative;
     visibility: visible;
+    margin-top: 32px;
 }
 
 .atxgd_nav-link{
@@ -107,9 +108,20 @@ body {
     background-color: var(--clear-sky-blue);
 } 
 
-.atxgd_nav-link-active {
+.atxgd_nav-current-page {
     color: var(--deep-blue);
     background-color: var(--dark-green);
+}
+/*meeple*/
+.atxgd_nav-current-page::before {
+    content:"";
+    position: absolute;
+    display: block;
+    background-image: url('./assets/banner/meeple_green.svg');
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    top: -26px;
 }
 
 #atxgd_mobile-burger {
@@ -122,13 +134,13 @@ body {
     box-shadow: inset 0.1em 0.1em 0.1em 0 var(--light-blue), inset -0.1em -0.1em 0.1em 0 var(--shadow-grey);
     left: 50%;
     transform: translateX(-50%);
-    top: 64px;
+    top: 72px;
 }
 #atxgd_mobile-burger:hover {
     background-color: var(--clear-sky-blue);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (orientation: portrait) {
     .atxgd_logo-wrapper {
         text-align: left;
     }
@@ -139,7 +151,7 @@ body {
         flex-direction: column;
         margin-left: 50%;
         transform: translateX(-50%);
-        top: 20px;
+        top: 48px;
         padding-top: 4px;
         gap: 1em;
         background-color: var(--deep-blue);
@@ -149,11 +161,15 @@ body {
         filter: drop-shadow(5px 5px 5px var(--shadow-grey));
         box-shadow: inset 0.1em 0.1em 0.1em 0 var(--light-blue), inset -0.1em -0.1em 0.1em 0 var(--shadow-grey);
         visibility: hidden;
+        margin-top: 0;
     }
     .atxgd_nav-link {
         filter: none;
         box-shadow: none;
         visibility: inherit; /*make sure buttons are invisible*/
+    }
+    .atxgd_nav-current-page::before {
+        display: none;
     }
 }
 
