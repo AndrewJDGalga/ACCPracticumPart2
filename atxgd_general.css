@@ -238,8 +238,7 @@ body {
     background-color: var(--dark-green);
     color: var(--light-blue);
     text-decoration: none;
-}
-
-.atxgd_center-text {
-    margin: 0 auto;
+    width: fit-content;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
